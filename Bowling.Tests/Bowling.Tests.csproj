@@ -16,4 +16,8 @@
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
     </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Bowling.Tests.csproj.lscache" />
+    </ItemGroup>
 </Project>

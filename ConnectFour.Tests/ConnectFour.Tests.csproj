@@ -17,4 +17,8 @@
       </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="ConnectFour.Tests.csproj.lscache" />
+    </ItemGroup>
+
 </Project>

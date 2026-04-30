@@ -21,4 +21,8 @@
       <ProjectReference Include="..\Exploration\Exploration.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="Exploration.Tests.csproj.lscache" />
+    </ItemGroup>
+
 </Project>
