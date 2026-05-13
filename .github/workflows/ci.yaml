@@ -10,13 +10,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
         
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v5
-        with: 
-          dotnet-version: "10.0.x"
-          
-      - name: Restore dependencies
-        run: dotnet restore CSharpTesting.slnx
+      - name: Setup
+        uses: ./.github/actions/dotnet-setup
         
       - name: Build Solution
         run: dotnet build CSharpTesting.slnx --configuration Release --no-restore
@@ -29,13 +24,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v5
-        with:
-          dotnet-version: "10.0.x"
-
-      - name: Restore dependencies
-        run: dotnet restore CSharpTesting.slnx
+      - name: Setup
+        uses: ./.github/actions/dotnet-setup
         
       - name: Test Exploration
         run: dotnet test Exploration.Tests/Exploration.Tests.csproj --configuration Release --no-restore --verbosity normal
@@ -53,13 +43,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v5
-        with:
-          dotnet-version: "10.0.x"
-
-      - name: Restore dependencies
-        run: dotnet restore CSharpTesting.slnx
+      - name: Setup
+        uses: ./.github/actions/dotnet-setup
         
       - name: Format
         run: dotnet format CSharpTesting.slnx --verify-no-changes --no-restore
