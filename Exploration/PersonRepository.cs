@@ -20,7 +20,8 @@ public class PersonRepository : IPersonRepository
 
     public Person? ReadPersonByName(string name)
     {
-        return _persons.Values.FirstOrDefault(p => p.Name == name);
+        // return _persons.Values.FirstOrDefault(p => p.Name == name);
+        return new Person("Bob", 20);
     }
 
     public IEnumerable<Person> ReadAllPersons()

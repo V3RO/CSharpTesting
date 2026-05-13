@@ -20,4 +20,8 @@
     <ItemGroup>
       <None Remove="Bowling.Tests.csproj.lscache" />
     </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Bowling\Bowling.csproj" />
+    </ItemGroup>
 </Project>
